@@ -21,4 +21,6 @@ class MetriquesSysteme(Sujet):
         donnees = {
             "cpu" : self._cpu,
             "ram" : self._ram,
-            "stockage" : self._disque}
+            "disque" : self._disque}
+        return donnees
+    

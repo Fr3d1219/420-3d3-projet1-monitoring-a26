@@ -1,5 +1,5 @@
 import tkinter as tk
-from observers.observer import Observateur
+from observers.observers import Observateur
 
 class AffichageCPU(Observateur):
 
@@ -16,7 +16,7 @@ class AffichageCPU(Observateur):
 
     def actualiser(self, sujet) -> None:
         # À compléter: Récupérez la valeur CPU depuis sujet.get_donnees()
-        donnees_metriques = sujet.get_donnees().get("cpu") # obtient les donnée du sujet
+        donnees_metriques = sujet.get_donnees() # obtient les donnée du sujet
         donnees_cpu = donnees_metriques.get("cpu")
         # À compléter: Mettez à jour le label et la barre
         self.label_cpu.config(text=f"{donnees_cpu:.1f}%")
